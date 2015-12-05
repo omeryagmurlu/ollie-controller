@@ -1,0 +1,34 @@
+{
+  "name": "ollie-controller",
+  "version": "0.0.0",
+  "description": "A tool to control Ollie from your computer",
+  "main": "lib/controller.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omeryagmurlu/ollie-controller.git"
+  },
+  "dependencies": {
+    "olliejs": "^2.0.0",
+    "nwjs": "latest"
+  },
+  "scripts": {
+    "start": "nwjs"
+  },
+  "window": {
+    "toolbar": true,
+    "width": 1100,
+    "height": 600,
+    "resizable": false
+  },
+  "keywords": [
+    "Ollie",
+    "Controller",
+    "Sphero"
+  ],
+  "author": "Ömer Yağmurlu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/omeryagmurlu/ollie-controller/issues"
+  },
+  "homepage": "omeryagmurlu.github.io"
+}

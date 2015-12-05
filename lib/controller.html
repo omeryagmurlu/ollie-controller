@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ollie Controller</title>
+	<link rel="stylesheet" href="./controller.css">
+
+</head>
+<body>
+	<div id="overlays">
+		<div class="overlay open" id="greeter">
+			<input type="text" autofocus placeholder="Enter your Ollie's UUID">
+			<div class="_1"></div>
+			<div class="_2"></div>
+		</div>
+		<div class="overlay" id="menu">
+			<div class="wrapper">
+				<span id="tankselect" class="left button">Tank Controls</span>
+				<span id="keyselect" class="mitte button">Keyboard</span>
+				<span id="joyselect" class="right button">VR Joystick</span>
+				<div class="meter mitte speedBar">
+					<span></span><div style="position:absolute;top:0;right:10px;font-size:12pt;">Max Speed: </div>
+				</div>
+				<span id="startCalibration" class="left button">Start Calibration</span>
+				<span id="finishCalibration" class="right button">Finish Calibration</span>
+				<span id="setRandomColor" class="button left">Random Color</span>
+				<span id="setRGB" class="button right">Set</span>
+				<input id="setRGBText" type="text" placeholder="Enter the hex color without #" class="buttonified right">
+				<div id="disconnect" class="mitte button">Disconnect</div>
+			</div>
+		</div>
+	</div>
+	<div id="pages" class="open">
+		<div id="controllers">
+			<div id="normMove">
+				<div class="left">
+					<div class="speedRing joystickContext"></div>
+					<div id='joystick1' class="joystickContext"></div>
+				</div>
+				<div class="right">
+					<div id='joystick2' class="joystickContext"></div>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
+			<div id="tank">
+				<div class="wasd">
+					<div class="flex">
+						<div class="taste w">W</div>
+					</div>
+					<div class="flex">
+						<div class="taste a">A</div>
+						<div class="taste s">S</div>
+						<div class="taste d">D</div>
+					</div>
+				</div>
+				<div class="ctsh">
+					<div class="taste tab">↹</div>
+					<div style="clear: both;"></div>
+					<div class="taste shift">⇧</div>
+				</div>
+				<div style="clear: both;"></div>
+				<div class="taste spacebar"><span></span></div>
+			</div>
+			<div id="keyboard">
+				<div class="throttle">
+					<div class="taste noborder w">W</div>
+					<div class="taste noborder s">S</div>
+					<div class="pedal"></div>
+					<div class="pedalSp"></div>
+				</div>
+				<div class="joystickContext">
+					<div class="innerKeyCont">
+						<div class="flex">
+							<div class="taste noborder a">↶</div>
+						</div>
+						<div class="flex">
+							<div class="taste noborder north">➽</div>
+						</div>
+						<div class="flex">
+							<div class="taste noborder d">↷</div>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+					<div class="line">
+						<div class="inner">
+							<div class="arrUp"></div>
+							<div class="arrDo"></div>
+						</div>
+					</div>
+				</div>
+				<div class="keys small">
+					<div class="flex">
+						<div class="taste _1">1</div>
+						<div class="taste _2">2</div>
+						<div class="taste _3">3</div>
+					</div>
+					<div class="arrKeys">
+						<div class="flex">
+							<div class="taste UP"></div>
+						</div>
+						<div class="flex">
+							<div class="taste LEFT"></div>
+							<div class="taste DOWN"></div>
+							<div class="taste RIGHT"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/jscolor.js"></script>
+	<script src="./js/virtualjoystick.js"></script>
+	<script src="./controller.js"></script>
+</body>
+</html>
