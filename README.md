@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/ollie-controller.svg)](https://badge.fury.io/js/ollie-controller)
+
 ##Ollie Controller
 
 ##Important
