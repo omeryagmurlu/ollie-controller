@@ -1,4 +1,4 @@
 #!/bin/bash
-npm start
+./src/linux/nw .
 
 

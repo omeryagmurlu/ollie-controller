@@ -4,26 +4,23 @@
 
 ##Important
 
-* You need to [rebuild](https://github.com/nwjs/nw.js/wiki/build-native-modules-with-nw-gyp) bluetooth-hci-socket module in noble module in olliejs module for this module to work. (I will make a script for this sometime)
-* To run without sudo (I haven't tested this on other distros or Mac or Windows) you have to enter the following command in ~/.nwjs after nwjs creates .nwjs directory. (I will make a script for this sometime)
+* ~~You need to [rebuild](https://github.com/nwjs/nw.js/wiki/build-native-modules-with-nw-gyp) bluetooth-hci-socket module in noble module in olliejs module for this module to work.~~
+* ~~To run without sudo (I haven't tested this on other distros or Mac or Windows) you have to enter the following command in ~/.nwjs after nwjs creates .nwjs directory.~~
 
-```sh
+~~```sh
 sudo setcap cap_net_raw+eip $(eval readlink -f `which nw`)
-```
+```~~
 
-* Running without sudo is highly encouraged, otherwise you may face unwanted folders in your project folder.
-* After you clone the repo/get the repo from npm to a folder and run ```npm install```, start the controller with ```npm start```.
-* There might be some problems with OSX.
+* ~~Running without sudo is highly encouraged, otherwise you may face unwanted folders in your project folder.~~
+* Ubuntu users shouldn't have to do anything now, I haven't written Mac and Windows scripts yet, will write them (at least Windows) when I have time.
+* After you clone the repo/get the repo from npm to a folder and run ```FIRSTRUN.sh``` first, then you can use```init.sh```.
 
 ##Installing
 
 * Clone this repository or ```npm install ollie-controller``` in a folder.
-* Rebuild hci-socket or the alternative for your distro (OS) [for windows it is bluetooth-hci-socket] with nw-gyp.
-* [Optional] grant bluetooth access to ```nw``` in ```~/.nwjs``` directory to use without sudo.
-* Run with either:
-	* ```nwjs .```
-	* ```npm start```
-	* ```./init.sh```
+* ~~Rebuild hci-socket or the alternative for your distro (OS) [for windows it is bluetooth-hci-socket] with nw-gyp.~~
+* ~~[Optional] grant bluetooth access to ```nw``` in ```~/.nwjs``` directory to use without sudo.||
+* ```FIRSTRUN.sh```
 
 ##[Screenshots](https://photos.google.com/share/AF1QipPIJ7by0HDT3CadOOfwpkgYTELoPh4nMvPTos-DzzvJVLd1ZEOA2KK8xXL2cpL0HQ?key=THVpMF9uVEN0Vl9uRG1tYTJhZF8xRmZCeWxaQkJB)
 

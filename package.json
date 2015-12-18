@@ -8,11 +8,7 @@
     "url": "git+https://github.com/omeryagmurlu/ollie-controller.git"
   },
   "dependencies": {
-    "olliejs": "^2.0.0",
-    "nwjs": "latest"
-  },
-  "scripts": {
-    "start": "nwjs"
+    "olliejs": "^2.0.0"
   },
   "window": {
     "toolbar": false,
