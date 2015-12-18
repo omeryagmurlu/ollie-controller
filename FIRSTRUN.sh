@@ -2,6 +2,7 @@
 
 npm install
 
+mkdir src
 if [ "$(uname)" == "Darwin" ]; then
     # Do something under Mac OS X platform       
 	echo Mac 

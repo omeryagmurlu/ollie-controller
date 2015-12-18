@@ -1,4 +1,4 @@
 #!/bin/bash
-./src/linux/nw .
+./src/*/nw .
 
 
