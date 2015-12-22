@@ -15,7 +15,7 @@
 			<div class="_1"></div>
 			<div class="_2"></div>
 		</div>
-		<div class="overlay" id="menu">
+		<div class="overlay" id="options">
 			<div class="wrapper">
 				<span id="tankselect" class="left button">Tank Controls</span>
 				<span id="keyselect" class="mitte button">Keyboard</span>
@@ -29,13 +29,20 @@
 				<span id="setRGB" class="button right">Set</span>
 				<input id="setRGBText" type="text" placeholder="Enter the hex color without #" class="buttonified right">
 				<div id="disconnect" class="mitte button">Disconnect</div>
-				<div id="morselect" class="mitte button">Morse</div>
 			</div>
+		</div>
+		<div class="overlay top-sliding" id="menu">
+			<div class="flex">
+				<span id="driveButton" class="button">Drive</span>
+				<span id="morselect" class="button">Morse Code</span>
+			</div>
+			<span id="optionButton" class="button">Options</span>
+			<span id="disconnect" class="button">Disconnect</span>
 		</div>
 	</div>
 	<div id="pages" class="open">
 		<div id="controllers">
-			<div id="normMove">
+			<div id="mJoy">
 				<div class="left">
 					<div class="speedRing joystickContext"></div>
 					<div id='joystick1' class="joystickContext"></div>
@@ -46,23 +53,30 @@
 				<div style="clear: both;"></div>
 			</div>
 			<div id="tank">
-				<div class="wasd">
-					<div class="flex">
-						<div class="taste w">W</div>
+				<div class="right">
+					<div class="wasd">
+						<div class="flex">
+							<div class="taste w">W</div>
+						</div>
+						<div class="flex">
+							<div class="taste a">A</div>
+							<div class="taste s">S</div>
+							<div class="taste d">D</div>
+						</div>
 					</div>
-					<div class="flex">
-						<div class="taste a">A</div>
-						<div class="taste s">S</div>
-						<div class="taste d">D</div>
+					<div class="ctsh">
+						<div class="taste tab">↹</div>
+						<div style="clear: both;"></div>
+						<div class="taste shift">⇧</div>
 					</div>
-				</div>
-				<div class="ctsh">
-					<div class="taste tab">↹</div>
 					<div style="clear: both;"></div>
-					<div class="taste shift">⇧</div>
+					<div class="taste spacebar"></div>
+				</div>
+				<div class="throttlespace">
+					<div class="pedal"></div>
+					<div class="pedalSp"></div>
 				</div>
 				<div style="clear: both;"></div>
-				<div class="taste spacebar"><span></span></div>
 			</div>
 			<div id="keyboard">
 				<div class="throttle">

@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Itim|Roboto+Condensed:400,300);
+@import url(https://fonts.googleapis.com/css?family=Bangers);
 
 ::-webkit-scrollbar { 
 		display: none; 
@@ -26,6 +27,7 @@ a, a:visited, a:hover{
 #pages{
 	padding:20px;
 	transform: translateY(-50%) scale(.7);
+	pointer-events: none;
 	position: relative;
 	top: 50vh;
 	transition: transform .5s;
@@ -33,15 +35,16 @@ a, a:visited, a:hover{
 
 #pages.open {
 	transform: translateY(-50%);
+	pointer-events: unset;
 }
 
-#normMove .left{
+#mJoy .left{
 	width:510px;
 	float:left;
 	position: relative;
 }
 
-#normMove .right{
+#mJoy .right{
 	width:510px;
 	float:right;
 	position: relative;
@@ -148,6 +151,16 @@ a, a:visited, a:hover{
 	float: right;
 }
 
+#tank .throttlespace {
+	float: left;
+	width: 8%;
+}
+
+#tank .right {
+	float: right;
+	width: 90%;
+}
+
 .ctsh > * {
 	float: right;
 }
@@ -241,7 +254,7 @@ a, a:visited, a:hover{
 	justify-content: space-between;
 }
 
-#keyboard > .throttle {
+#keyboard > .throttle, .throttlespace {
 	box-sizing: content-box;
 	position: relative;
 	border-radius: 40px;
@@ -251,7 +264,7 @@ a, a:visited, a:hover{
 	overflow: hidden;
 }
 
-.throttle .pedal {
+.throttle .pedal, .throttlespace .pedal {
 	border-radius: 40px;
 	width: 80px;
 	position: absolute;
@@ -260,7 +273,7 @@ a, a:visited, a:hover{
 	border: 5px dashed #CD661D;
 }
 
-.throttle .pedalSp {
+.throttle .pedalSp, .throttlespace .pedalSp {
 	transition: all .2s;
 	width: 80px;
 	position: absolute;
@@ -293,6 +306,16 @@ a, a:visited, a:hover{
 	transition: visibility .5s .5s, opacity .5s;
 }
 
+.overlay.top-sliding {
+	padding-top: 30px;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+}
+
 .overlay.open {
 	visibility: visible;
 	transition: visibility .5s, opacity .5s;
@@ -318,10 +341,6 @@ a, a:visited, a:hover{
 	margin:auto;
 }
 
-.overlay .wrapper > * {
-	margin:0 10px 30px 10px;
-}
-
 .overlay .left {
 	float: left;
 }
@@ -334,6 +353,65 @@ a, a:visited, a:hover{
 	clear: both;
 	float: none;
 	position: relative;
+}
+
+@-webkit-keyframes alert {
+	8%, 24%, 40%, 56%, 72%, 88% {
+		transform: rotate(5deg) translate(-50%, -50%);
+	}
+
+	4%, 16%, 32%, 48%, 64%, 80%, 96% {
+		transform: skew(10deg) rotate(5deg) translate(-50%, -50%);
+	}
+
+	0%, 20%, 36%, 52%, 68%, 84%, 100% {
+		transform: rotate(-5deg) translate(-50%, -50%);
+	}
+
+	12%, 28%, 44%, 60%, 76%, 92% {
+		transform: skew(-10deg) rotate(-5deg) translate(-50%, -50%);
+	}
+
+	0% {
+		-webkit-filter: hue-rotate(0deg);
+	}
+
+	10% {
+		-webkit-filter: hue-rotate(0deg);
+	}
+
+	50% {
+		-webkit-filter: hue-rotate(180deg);
+	}
+
+	90% {
+		-webkit-filter: hue-rotate(0deg);
+	}
+
+	100% {
+		-webkit-filter: hue-rotate(0deg);
+	}
+}
+
+.alert {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	opacity: 0;
+	transform-origin: left;
+	pointer-events: none;
+	-webkit-pointer-events: none;
+	transform: translate(-50%, -50%);
+	font-family: 'Bangers', cursive;
+	text-align: center;
+	font-size: 5em;
+	z-index: 867976;
+	-webkit-animation: alert 2s infinite;
+	transition: opacity .2s;
+}
+
+.alert.on {
+	opacity: 1;
 }
 
 /* Bar (from chris coyier) (simplified) */
@@ -400,6 +478,8 @@ input[type=checkbox] + label {
 	padding:16px 31px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px rgba(76,115,166,1);
+
+	margin:0 10px 30px 10px;
 }
 .button:hover {
 	border-color: rgba(250,121,0,1);

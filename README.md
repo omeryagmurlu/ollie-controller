@@ -6,13 +6,10 @@
 
 * ~~You need to [rebuild](https://github.com/nwjs/nw.js/wiki/build-native-modules-with-nw-gyp) bluetooth-hci-socket module in noble module in olliejs module for this module to work.~~
 * ~~To run without sudo (I haven't tested this on other distros or Mac or Windows) you have to enter the following command in ~/.nwjs after nwjs creates .nwjs directory.~~
-
-~~```sh
-sudo setcap cap_net_raw+eip $(eval readlink -f `which nw`)
-```~~
+~~CODE DELETED~~
 
 * ~~Running without sudo is highly encouraged, otherwise you may face unwanted folders in your project folder.~~
-* Ubuntu users shouldn't have to do anything now, I haven't written Mac and Windows scripts yet, will write them (at least Windows) when I have time.
+* Ubuntu users shouldn't have to do anything now, I haven't written ~~Mac and ~~Windows script~~s~~ yet, will write ~~them~~ it when I have time.
 * After you clone the repo/get the repo from npm to a folder and run ```FIRSTRUN.sh``` first, then you can use```init.sh```.
 
 ##Installing
