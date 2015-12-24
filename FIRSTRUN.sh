@@ -31,7 +31,7 @@ elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
     # Do something under Windows NT platform
 fi
 
-(cd node_modules/olliejs/node_modules/noble/node_modules/bluetooth-hci-socket; nw-gyp configure --target=0.12.3; nw-gyp build )
+(cd node_modules/noble/node_modules/bluetooth-hci-socket; nw-gyp configure --target=0.12.3; nw-gyp build )
 
 sudo setcap cap_net_raw+eip src/*/nw
 
