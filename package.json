@@ -11,7 +11,7 @@
     "olliejs": "^2.0.0"
   },
   "window": {
-    "toolbar": false,
+    "toolbar": true,
     "width": 1100,
     "height": 600,
     "resizable": false
@@ -26,5 +26,6 @@
   "bugs": {
     "url": "https://github.com/omeryagmurlu/ollie-controller/issues"
   },
-  "homepage": "https://omeryagmurlu.github.io"
+  "homepage": "https://omeryagmurlu.github.io",
+  "chromium-args": "--disable-setuid-sandbox"
 }

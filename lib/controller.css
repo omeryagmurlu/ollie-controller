@@ -27,7 +27,6 @@ a, a:visited, a:hover{
 #pages{
 	padding:20px;
 	transform: translateY(-50%) scale(.7);
-	pointer-events: none;
 	position: relative;
 	top: 50vh;
 	transition: transform .5s;
@@ -35,7 +34,6 @@ a, a:visited, a:hover{
 
 #pages.open {
 	transform: translateY(-50%);
-	pointer-events: unset;
 }
 
 #mJoy .left{
@@ -296,6 +294,7 @@ a, a:visited, a:hover{
 
 .overlay {
 	visibility: hidden;
+	pointer-events: none; /*please work*/
 	position: fixed;
 	opacity: 0;
 	width: 100%;
@@ -304,6 +303,12 @@ a, a:visited, a:hover{
 	color: rgba(76,115,166,1);
 	z-index: 1000;
 	transition: visibility .5s .5s, opacity .5s;
+}
+
+.overlay_flex {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 .overlay.top-sliding {
@@ -317,6 +322,7 @@ a, a:visited, a:hover{
 }
 
 .overlay.open {
+	pointer-events: unset;
 	visibility: visible;
 	transition: visibility .5s, opacity .5s;
 	opacity: 1;
@@ -339,20 +345,6 @@ a, a:visited, a:hover{
 	max-width: 800px;
 	padding: 30px 0;
 	margin:auto;
-}
-
-.overlay .left {
-	float: left;
-}
-
-.overlay .right {
-	float: right;
-}
-
-.overlay .mitte {
-	clear: both;
-	float: none;
-	position: relative;
 }
 
 @-webkit-keyframes alert {
@@ -412,6 +404,33 @@ a, a:visited, a:hover{
 
 .alert.on {
 	opacity: 1;
+}
+
+#morseTextArea {
+	width: 100%;
+	height: 300px;
+	transition: all .5s;
+	resize: none;
+}
+
+#morse1.closed #morseTextArea { /* while sending code */
+	height: 50px;
+}
+
+#morseSend {
+	margin: 0;
+}
+
+#morse2 {
+	margin-top: 30px;
+	text-align: center;
+	display: none;
+	width: 100%;
+}
+
+#wordsMorse, #morseCodes{
+	margin:auto;
+	min-height: 2em;
 }
 
 /* Bar (from chris coyier) (simplified) */
@@ -494,9 +513,31 @@ input[type=checkbox] + label {
 	top:1px;
 }
 
+.button.modern {
+	display: block;
+	margin: 0;
+	height: 100%;
+	border-radius: 0;
+	background: white;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 18px;
+	appearance: none;
+	box-shadow: none;
+	border-radius: none;
+	padding: 10px;
+	border: none;
+	color: unset;
+	border-bottom: solid 3px #c9c9c9;
+	transition: border 0.3s;
+}
+.button.modern:hover {
+	outline: none;
+	border-bottom: solid 3px #969696;
+}
+
 /* input (callmenick) */
 
-input[type="text"] {
+input[type="text"], textarea {
 	display: block;
 	margin: 0;
 	width: 100%;
@@ -506,17 +547,19 @@ input[type="text"] {
 	box-shadow: none;
 	border-radius: none;
 }
-input[type="text"]:focus {
+input[type="text"]:focus,
+textarea:focus {
 	outline: none;
 }
-input[type="text"] {
+input[type="text"], textarea {
 	padding: 10px;
 	border: none;
 	border-bottom: solid 3px #c9c9c9;
 	transition: border 0.3s;
 }
 input[type="text"]:focus,
-input[type="text"].focus {
+input[type="text"].focus,
+textarea:focus {
 	border-bottom: solid 3px #969696;
 }
 

@@ -17,27 +17,33 @@
 		</div>
 		<div class="overlay" id="options">
 			<div class="wrapper">
-				<span id="tankselect" class="left button">Tank Controls</span>
-				<span id="keyselect" class="mitte button">Keyboard</span>
-				<span id="joyselect" class="right button">VR Joystick</span>
-				<div class="meter mitte speedBar">
-					<span></span><div style="position:absolute;top:0;right:10px;font-size:12pt;">Max Speed: </div>
+				<div class="overlay_flex">
+					<span id="tankselect" class="button">Tank Controls</span>
+					<span id="keyselect" class="button">Keyboard</span>
+					<span id="joyselect" class="button">VR Joystick</span>
 				</div>
-				<span id="startCalibration" class="left button">Start Calibration</span>
-				<span id="finishCalibration" class="right button">Finish Calibration</span>
-				<span id="setRandomColor" class="button left">Random Color</span>
-				<span id="setRGB" class="button right">Set</span>
-				<input id="setRGBText" type="text" placeholder="Enter the hex color without #" class="buttonified right">
-				<div id="disconnect" class="mitte button">Disconnect</div>
+				<div class="overlay_flex">
+					<span id="startCalibration" class="button">Start Calibration</span>
+					<span id="finishCalibration" class="button">Finish Calibration</span>
+				</div>
+				<div class="overlay_flex">
+					<span id="setRandomColor" class="button">Random Color</span>
+					<input id="setRGBText" type="text" placeholder="Enter the hex color without #" class="buttonified">
+					<span id="setRGB" class="button">Set</span>
+				</div>
 			</div>
 		</div>
 		<div class="overlay top-sliding" id="menu">
 			<div class="flex">
-				<span id="driveButton" class="button">Drive</span>
-				<span id="morselect" class="button">Morse Code</span>
+				<div id="driveButton" class="button">Drive</div>
+				<div id="morselect" class="button">Morse Code</div>
 			</div>
-			<span id="optionButton" class="button">Options</span>
-			<span id="disconnect" class="button">Disconnect</span>
+			<div class="flex">
+				<div id="optionButton" class="button">Options</div>
+			</div>
+			<div class="flex">
+				<div id="disconnect" class="button">Disconnect</div>
+			</div>
 		</div>
 	</div>
 	<div id="pages" class="open">
@@ -125,8 +131,15 @@
 			</div>
 		</div>
 		<div id="morse">
-			<div class="in"></div>
-			<div class="out"></div>
+			<div id="morse1" class="flex">
+				<textarea id="morseTextArea"></textarea>
+				<div id="morseSend" class="button modern">Send Text</div>
+				<div id="morse2">
+					<div id="wordsMorse"></div>
+					<div id="morseCodes"></div>
+				</div>
+			</div>
+			<div id="hiddenChar" style="display:none"></div>
 		</div>
 	</div>
 	<script src="./js/jquery.min.js"></script>
