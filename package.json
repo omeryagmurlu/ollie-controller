@@ -1,6 +1,6 @@
 {
   "name": "ollie-controller",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "A tool to control Ollie from your computer",
   "main": "lib/controller.html",
   "repository": {
@@ -12,7 +12,7 @@
     "noble": "latest"
   },
   "window": {
-    "toolbar": true,
+    "toolbar": false,
     "width": 1100,
     "height": 600,
     "resizable": false
