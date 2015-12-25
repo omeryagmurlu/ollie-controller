@@ -8,7 +8,7 @@
     "url": "git+https://github.com/omeryagmurlu/ollie-controller.git"
   },
   "dependencies": {
-    "sphero": "git://github.com/orbotix/sphero.js.git#feature/ble",
+    "sphero": "latest",
     "noble": "latest"
   },
   "window": {
